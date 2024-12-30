@@ -1,19 +1,9 @@
 package io.github.lgsecs.models
 
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 
-abstract class CircuitPart(
-    private val shapeRenderer: ShapeRenderer,
-    private var x: Float,
-    private var y: Float,
-) : LGSLevelListener{
-
-    private val size = 150f
+abstract class CircuitPart(x: Float, y: Float) : LGSLevelListener {
+    private var mX: Float = x
+    private var mY: Float = y
 
     override fun changeLevel(e: LGSLevelEvent) {}
-
-    fun drawingPart() {
-        shapeRenderer.rect(x, y, size, size)
-    }
-
 }

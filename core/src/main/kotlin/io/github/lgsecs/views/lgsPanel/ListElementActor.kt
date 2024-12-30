@@ -15,6 +15,8 @@ import io.github.lgsecs.Main.Companion.WIDTH
 import io.github.lgsecs.Main.Companion.assetManager
 
 class ListElementActor(stage: Stage) : Actor(){
+
+
     private val table: Table = Table()
     private val scrollPane : ScrollPane
     private val skin : Skin = assetManager.manager.get(assetManager.uiskinPath, Skin::class.java)
@@ -68,5 +70,9 @@ class ListElementActor(stage: Stage) : Actor(){
             setScrollingDisabled(true, false)
         }
         stage.addActor(scrollPane)
+    }
+
+    companion object{
+        const val AND_GATE = 0x1
     }
 }
